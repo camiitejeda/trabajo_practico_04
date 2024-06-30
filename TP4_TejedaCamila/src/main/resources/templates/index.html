@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "es" xmlns:th="https://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trabajo Práctico 04</title>
 <link rel="stylesheet" href="/CSS/estilos.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -9,69 +9,20 @@
 </head>
 <body>
 
-	<header>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary">
-		  <div class="container-fluid">
-		    <a class="navbar-brand" href="#">
-		    <img alt="Logo Facultad" src="img/logo.png">
-		    </a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		        <li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">Acerca De</a>
-		        </li>
-		        <li class="nav-item dropdown">
-		          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Carreras
-		          </a>
-		          <ul class="dropdown-menu">
-		            <li><a class="dropdown-item" href="#">Tecnicatura en Comunicación Digital Convergente</a></li>
-		            <li><a class="dropdown-item" href="#">Licenciatura en Antropología</a></li>
-		            <li><a class="dropdown-item" href="#">Licenciatura en Ciencias de la Educación</a></li>
-		            <li><a class="dropdown-item" href="#">Tecnicatura y Licenciatura en Turismo</a></li>
-		            <li><a class="dropdown-item" href="#">Licenciatura en Educación para la Salud </a></li>
-		            <li><a class="dropdown-item" href="#">Licenciatura en Historia</a></li>
-		            <li><a class="dropdown-item" href="#">Profesorado y Licenciatura en Filosofía</a></li>
-		            <li><a class="dropdown-item" href="#">Profesorado en Letras</a></li>
-		            <li><a class="dropdown-item" href="#">Profesorado en Educación para la Salud</a></li>
-		            <li><a class="dropdown-item" href="#">Licenciatura en Trabajo Social</a></li>
-		            <li class="nav-item">
-		          	<a class="nav-link disabled" aria-disabled="true">No Disponible</a>
-		        	</li>
-		            <li><hr class="dropdown-divider"></li>
-		            <li><a class="dropdown-item" href="#">Otras</a></li>
-		          </ul>
-				<li class="nav-item">
-		          <a class="nav-link" href="#">Noticias</a>
-		        </li>
-				<li class="nav-item">
-		          <a class="nav-link" href="#">Contacto</a>
-		        </li>		        
-		      </ul>
-		      <form class="d-flex" role="search">
-		        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-		        <button class="btn btn-outline-success" type="submit">Buscar</button>
-		      </form>
-		    </div>
-		  </div>
-		</nav>
-		<h1>FHyCS</h1>
+	<header class="header-navbar">
+		<div data-th-replace="~{fragments/header::navbar}" ></div>
+		<h1 class="main-title">FHyCS</h1>
 	</header>
-	<div class="container">
-	<main class="principal">
+	
+	<div class="row">
+	<main class="principal col-9">
 		<div class="info-facultad">
 			<h2>¿Qué es la Facultad de Humanidades y Ciencias Sociales?</h2>
 			<p>La Facultad de Humanidades y Ciencias Sociales (FHyCS) de San Salvador de Jujuy es una institución de educación superior que forma parte de la Universidad Nacional de Jujuy (UNJu). La facultad promueve la investigación a través de diversos institutos y centros de investigación dedicados a temas sociales, educativos, históricos y culturales. Algunos de estos institutos realizan proyectos en colaboración con otras universidades y organizaciones. </p>
 			<h3>Sedes</h3>
 			<p>La Facultad de Humanidades y Ciencias Sociales (FHyCS) de la Universidad Nacional de Jujuy tiene varias sedes en la provincia, cada una con funciones específicas. La Sede Central alberga oficinas administrativas y la mayoría de las aulas y auditorios. La Sede Cátedra de Historia se enfoca en carreras relacionadas con la historia y actividades de investigación. La Sede Tacita de Plata maneja actividades académicas y administrativas para varias carreras. La Sede Social y Cultural se dedica a actividades de extensión, eventos culturales y talleres. Además, la facultad tiene expansiones en San Pedro, Tilcara, Humahuaca y El Carmen.</p>
 		</div>
-		<div class="section-noticias">
+		<div class="section-noticias" id="noticias">
 		<h2>Noticias Recientes</h2>
 		<h4 class="tit-noticias">Se desarrollan las Primeras Jornadas de Fortalecimiento de la Investigación del NOA</h4>
 		<p class="text-noticias"> El acto de apertura se realizó el lunes 24 de junio, encabezado por el rector de la UNSa, Daniel Hoyos, y los secretarios de Ciencia y Técnica de las Universidades Nacionales de Catamarca, Chilecito, La Rioja, Santiago del Estero y Tucumán y Jujuy quienes también son organizadoras del evento.</p>
@@ -82,29 +33,24 @@
 
 	</main>
 
-		<aside class="aside">
+		<aside class="col-3">
+			<div class="bloque-aside">
 			<p>Biblioteca Digital CID UNJu</p>
 			<a href="https://www.bidi.la" target="_blank">
-			<img alt="Biblioteca Digital CID UNJu" src="img/CID-Ingenieria.jpeg" title="bibliotec">
+			<img alt="Biblioteca Digital CID UNJu" src="img/CID-Ingenieria.jpeg" title="biblioteca">
 			</a>
-
+			</div>
+			<div class="bloque-aside">
 			<p>Calendario Académico</p>
 			<a href="https://www.fhycs.unju.edu.ar/calendario_academico.html" target="_blank">
 			<img alt="Calendario académico" src="img/bibliodig.png" title="calendario academico">
 			</a>
+			</div>
 		</aside>
 	</div>
 
-	<footer id="redes1">
-	<h3>Contacto</h3>
-		<ul class = "ulist">
-		<li><a>Correo: virtual@unju.edu.fi</a><br>
-		<li><a>Teléfono: 0388 - 154708223</a><br>
-		<li><a href="https://x.com/prensaunju?lang=es">Instagram</a>
-		<li><a href="https://www.facebook.com/universidadnacionaldejujuy/">Facebook</a>
-		<li><a href="https://x.com/prensaunju?lang=es">Twitter</a>
-		<a href="https://tv.unju.edu.ar">UNJuTV</a><br>
-		</ul>
+	<footer id="contacto" class="footer-page">
+	<div data-th-replace="~{fragments/footer::footer}"></div>
 	</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
