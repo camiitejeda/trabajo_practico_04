@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.main-title{
+    text-align: center;
+    background-color: #FF8000;
+    padding: 20px;
+}
+
+.container{
+
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 30px;
+	margin: 0;
+	border: 0;
+}
+
+.info-facultad{
+    margin:20px;
+    padding:40px;
+    border:30px;
+}
+
+.navbar-brand img {
+    width: 50%; 
+    height: auto; 
+    padding: 10px;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.nav-item {
+	font-size: 100%;
+}
+
+.principal{
+      background-color: #FFDBC5;
+}
+
+.section-noticias{
+    margin:10px;
+    padding:30px;
+    border:20px;    
+}
+
+.bloque-aside{
+    background-color: #f2f2f2; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    overflow: hidden;
+    word-wrap: break-word; 
+}
+
+.img-aside{
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.noticias{
+    padding: 30px;
+    margin:0;
+    border: 10px;
+}
+
+
+
+.ulist {
+    list-style-type: none;
+}
+
+.ulist-1{
+    list-style-type: square;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s; 
+}
+
+a:hover {
+    color: #0056b3; 
+}
+
+
+.aside{
+	flex: 1;
+}
