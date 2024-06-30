@@ -2,6 +2,9 @@ package ar.edu.unju.fi.model;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alumno {
 	private String dni;
     private String nombre;
@@ -11,12 +14,16 @@ public class Alumno {
     private Date fechaNacimiento;
     private String domicilio;
     private String LU;
-
+    private boolean estado;
+    
     public Alumno() {
+    	
     }
 
+
+
 	public Alumno(String dni, String nombre, String apellido, String email, String telefono, Date fechaNacimiento,
-			String domicilio, String lU) {
+			String domicilio, String lU, boolean estado) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -26,7 +33,10 @@ public class Alumno {
 		this.fechaNacimiento = fechaNacimiento;
 		this.domicilio = domicilio;
 		LU = lU;
+		this.estado = estado;
 	}
+
+
 
 	public String getDni() {
 		return dni;
@@ -92,4 +102,13 @@ public class Alumno {
 		LU = lU;
 	}
 
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+    
+    
 }
