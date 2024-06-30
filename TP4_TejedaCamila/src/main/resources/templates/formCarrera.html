@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/web_jars/bootstrap/css/bootstrap.min.css">
+<title>Registro de Carreras</title>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Registro de Carreras</h1>
+
+		<form data-th-object="${nuevaCarrera}">
+			<div class="row mb-3">
+				<div class="col-md-6">
+					<label for="InputNombre" class="form-label">Nombre de la Carrera</label>
+					<input type="text" class="form-control" id="InputNombre" placeholder="Ingrese el nombre de la carrera">
+				</div>
+				<div class="col-md-6">
+					<label for="InputCodigo" class="form-label">Código de la Carrera</label>
+					<input type="text" class="form-control" id="InputCodigo" placeholder="Ingrese el código de la carrera">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-md-6">
+					<label for="CantidadAños" class="form-label">Duración en Años</label>
+					<input type="number" class="form-control" id="CantidadAños" placeholder="Ingrese la duración en años">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-12">
+					<button type="submit" class="btn btn-success">Guardar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<script src="/web_jars/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
