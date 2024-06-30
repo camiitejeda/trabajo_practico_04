@@ -7,12 +7,11 @@ import ar.edu.unju.fi.model.*;
 public class ListadoCarreras {
 
 		public static List<Carrera> carreras = new ArrayList<Carrera>();
-
-
+			
 		public static List<Carrera> listarCarreras(){
 			return carreras;
 		}
-
+		
 		public static Carrera buscarCarreraPorCodigo (String codigo) {
 			for (Carrera c: carreras) {
 				if (c.getCodigo().equals(codigo)){
@@ -21,11 +20,12 @@ public class ListadoCarreras {
 			}
 			return null;
 		}
-
+		
 		public static void agregarCarrera (Carrera c) {
+			c.setEstado(true);
 			carreras.add(c);
 		}
-
+		
 		public static void modificarCarrera(Carrera carreraModificada) {
 			for (int i = 0 ; i < carreras.size() ; i++) {
 				Carrera carrera = carreras.get(i);
@@ -35,8 +35,15 @@ public class ListadoCarreras {
 				}
 			}
 		}
-
+		
 		public static void eliminarCarrera (String codigo) {
-			carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));
+			for (int i = 0 ; i < carreras.size() ; i++) {
+				Carrera carrera = carreras.get(i);
+				if (carrera.getCodigo().equals(codigo)) {
+					carrera.setEstado(false);
+					break;
+				}
+			}
+			
 		}
 }
